@@ -3,7 +3,7 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const Footer2 = () => {
     return ( 
-        <div className="footer bg-gray-950 mt-25 flex-col px-10 py-10 -translate-y-[100px]">
+        <div className="footer bg-gray-950 mt-25 flex-col px-10 py-10 translate-y-[300px]">
             <div className="flex gap-[10vw]">
                 <div>
                     <p className="text-white p-4">Resources</p>
