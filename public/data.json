@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "img": "peach.jfif",
+            "name": "peach juice",
+            "id": 1,
+            "price": 20,
+            "number": 100
+        },
+        {
+            "img": "watermelon.jfif",
+            "name": "watermelon juice",
+            "id": 1,
+            "price": 20,
+            "number": 100
+        },
+        {
+            "img": "mango.jfif",
+            "name": "mango juice",
+            "id": 1,
+            "price": 20,
+            "number": 100
+        },
+        {
+            "img": "pineapple.jfif",
+            "name": "pineapple juice",
+            "id": 1,
+            "price": 20,
+            "number": 100
+        }
+    ]
+}

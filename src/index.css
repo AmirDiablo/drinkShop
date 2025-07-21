@@ -1,0 +1,348 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+} */
+
+
+.landing{
+    overflow: hidden;
+    background-image: url(./assets/beachBack2.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+   /*  --mask:
+    radial-gradient(67.08px at 50% calc(100% - 90px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% calc(100% + 60px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask); */
+}
+
+.leafLeft{
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.leafRight{
+    animation-name: slideRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.banner{
+    height: 70lvh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .product{
+    /* background-color: red; */
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 70px;  /* 230px */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0px;
+    display: flex;
+}
+
+.soda1{
+    --url: url(./assets/bg.png);
+}
+.soda2{
+    --url: url(./assets/bg2.png);
+}
+
+.banner .product .soda{
+    background: 
+        var(--url) var(--left) 0,
+        url(./assets/sodaCan.png)
+    ;
+    background-size: auto 100%;
+    width: 120px;
+    bottom: 0;
+    aspect-ratio: 2/3.5;
+    background-blend-mode: multiply;
+    mask-image: url(./assets/sodaCan.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner .product:hover{
+    --left: -1000px;
+    transform: translateY(-100px) translateX(-50%);
+}
+
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+}
+.banner .product:hover .soda:nth-child(2) {
+    opacity: 1;
+}
+
+.flatWood{
+    transition: 0.7s;
+}
+
+.fruit{
+    transition: 0.7s;
+}
+
+.curve {
+    width: 100%;
+    height: 40px;
+    background: #cc4444; /* رنگ پس‌زمینه */
+
+     --mask:
+    radial-gradient(120.75px at 50% 162px,#000 99%,#0000 101%) calc(50% - 108px) 0/216px 100%,
+    radial-gradient(120.75px at 50% -108px,#0000 99%,#000 101%) 50% 54px/216px 100% repeat-x;
+    -webkit-mask: var(--mask);
+          mask: var(--mask);
+    
+}
+
+.shape{
+    border-radius: 60% 40% 69% 31% / 37% 63% 37% 63% ;
+    background-image: url(./assets/adver.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 100px 200px;
+    
+}
+
+.info div>*{
+    margin-left: auto;
+    margin-right: auto;
+}
+.item1{
+    aspect-ratio: 1;
+  clip-path: shape(from 90.58% 42.28%,curve to 92.07% 58.30% with 91.29% 50.00%,curve to 89.09% 74.40% with 92.86% 66.60%,curve to 76.15% 83.16% with 85.32% 82.20%,curve to 60.43% 87.97% with 66.99% 84.12%,curve to 45.68% 92.90% with 53.87% 91.82%,curve to 28.88% 91.67% with 37.49% 93.98%,curve to 19.01% 79.66% with 20.28% 89.35%,curve to 9.52% 64.54% with 17.74% 69.97%,curve to 4.04% 50.51% with 1.29% 59.10%,curve to 12.87% 36.35% with 6.80% 41.92%,curve to 22.69% 24.78% with 18.95% 30.78%,curve to 32.63% 14.76% with 26.42% 18.78%,curve to 46.47% 8.23% with 38.83% 10.74%,curve to 61.99% 7.90% with 54.10% 5.72%,curve to 74.56% 16.71% with 69.87% 10.09%,curve to 84.56% 28.94% with 79.25% 23.33%,curve to 90.58% 42.28% with 89.87% 34.56%);
+}
+
+.item2 {
+  aspect-ratio: 1;
+  clip-path: shape(from 57.91% 91.82%,curve to 46.96% 94.71% with 52.72% 93.31%,curve to 35.31% 94.92% with 41.21% 96.10%,curve to 26.65% 87.65% with 29.42% 93.73%,curve to 19.17% 78.70% with 23.88% 81.58%,curve to 10.49% 71.52% with 14.46% 75.82%,curve to 3.72% 61.71% with 6.52% 67.21%,curve to 5.19% 50.54% with 0.91% 56.20%,curve to 6.65% 38.30% with 9.47% 44.88%,curve to 8.54% 27.51% with 3.83% 31.72%,curve to 18.95% 21.33% with 13.26% 23.31%,curve to 28.44% 15.79% with 24.65% 19.36%,curve to 37.08% 9.98% with 32.22% 12.22%,curve to 47.41% 6.01% with 41.94% 7.73%,curve to 58.53% 5.32% with 52.88% 4.28%,curve to 68.37% 10.40% with 64.18% 6.35%,curve to 77.50% 17.00% with 72.56% 14.45%,curve to 87.47% 23.08% with 82.44% 19.54%,curve to 93.85% 32.52% with 92.50% 26.63%,curve to 94.11% 44.20% with 95.19% 38.40%,curve to 91.35% 55.09% with 93.04% 50.00%,curve to 87.03% 64.55% with 89.67% 60.19%,curve to 83.97% 75.21% with 84.40% 68.91%,curve to 80.08% 86.73% with 83.55% 81.50%,curve to 69.86% 91.14% with 76.62% 91.95%,curve to 57.91% 91.82% with 63.10% 90.33%);
+}
+
+.item3 {
+  aspect-ratio: 1;
+  clip-path: shape(from 94.50% 36.93%,curve to 88.22% 59.03% with 98.34% 50.00%,curve to 73.10% 78.84% with 78.10% 68.06%,curve to 56.80% 85.48% with 68.10% 89.63%,curve to 34.00% 81.53% with 45.50% 81.32%,curve to 12.48% 72.85% with 22.50% 81.74%,curve to 11.64% 52.69% with 2.46% 63.96%,curve to 24.07% 32.63% with 20.81% 41.43%,curve to 36.32% 20.64% with 27.32% 23.83%,curve to 54.32% 19.14% with 45.32% 17.45%,curve to 77.00% 22.34% with 63.32% 20.82%,curve to 94.50% 36.93% with 90.67% 23.86%);
+}
+
+.item4 {
+  aspect-ratio: 1;
+  clip-path: shape(from 69.48% 85.65%,curve to 47.29% 84.64% with 57.23% 87.88%,curve to 26.19% 78.11% with 37.36% 81.41%,curve to 16.83% 63.12% with 15.02% 74.81%,curve to 16.32% 40.28% with 18.65% 51.43%,curve to 22.57% 21.18% with 14.00% 29.12%,curve to 42.59% 10.85% with 31.13% 13.23%,curve to 62.73% 15.68% with 54.05% 8.47%,curve to 82.83% 28.83% with 71.41% 22.88%,curve to 95.62% 48.13% with 94.26% 34.78%,curve to 89.36% 72.45% with 96.98% 61.49%,curve to 69.48% 85.65% with 81.74% 83.41%);
+}
+
+.section3 {
+    --mask:
+    radial-gradient(78.26px at 50% 105px,#000 99%,#0000 101%) calc(50% - 70px) 0/140px 100%,
+    radial-gradient(78.26px at 50% -70px,#0000 99%,#000 101%) 50% 35px/140px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.section4{
+    --mask:
+    radial-gradient(78.26px at 50% 105px,#000 99%,#0000 101%) calc(50% - 70px) 0/140px 100%,
+    radial-gradient(78.26px at 50% -70px,#0000 99%,#000 101%) 50% 35px/140px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.shape2 {
+  aspect-ratio: 1;
+  clip-path: shape(from 87.86% 53.22%,curve to 89.54% 69.02% with 93.16% 61.08%,curve to 75.31% 75.91% with 85.92% 76.97%,curve to 60.36% 83.57% with 64.69% 74.85%,curve to 47.36% 93.15% with 56.02% 92.29%,curve to 33.35% 86.65% with 38.70% 94.01%,curve to 20.58% 75.54% with 28.00% 79.30%,curve to 9.38% 64.05% with 13.16% 71.79%,curve to 3.88% 47.02% with 5.60% 56.32%,curve to 11.22% 32.70% with 2.17% 37.72%,curve to 22.55% 17.56% with 20.26% 27.67%,curve to 34.75% 10.00% with 24.84% 7.46%,curve to 51.29% 15.88% with 44.67% 12.55%,curve to 65.55% 19.15% with 57.91% 19.20%,curve to 77.64% 25.07% with 73.20% 19.10%,curve to 82.32% 38.20% with 82.08% 31.03%,curve to 87.86% 53.22% with 82.56% 45.37%);
+  background-image: url(./assets/lemonDrink.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about2{
+    display: grid;
+    grid-template-rows: 50px 100px 200px;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+
+/*********************************************/
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    /* box-shadow: inset 10px 0px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.soda3{
+    --left: 210px;
+    position: sticky;
+    top: 400px;
+}
+
+.newSoda{
+    background: 
+        url(./assets/banner3.jpg) var(--left) 10px,
+        url(./assets/sodaCan.png)
+    ;
+    background-size: auto 100%;
+    width: 120px;
+    
+    aspect-ratio: 2/3.5;
+    background-blend-mode: multiply;
+    mask-image: url(./assets/sodaCan.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+}
+
+.sodaAds1{
+    background: 
+        url(./assets/banner3.jpg) 390px,
+        url(./assets/sodaCan.png)
+    ;
+    background-size: auto 100%;
+    width: 90px;
+    aspect-ratio: 2/3.5;
+    background-blend-mode: multiply;
+    mask-image: url(./assets/sodaCan.png);
+    mask-size: auto 100%;
+}
+.sodaCon1{
+    background-color: #e98989;
+    border-radius: 40% 60% 55% 45% / 70% 30% 70% 30% ;
+    width: 150px;
+    aspect-ratio: 1/1;
+
+}
+
+.sodaAds2{
+    background: 
+    url(./assets/banner5.jpg) 380px,
+    url(./assets/sodaCan.png)
+    ;
+    background-size: auto 100%;
+    width: 90px;
+    aspect-ratio: 2/3.5;
+    background-blend-mode: multiply;
+    mask-image: url(./assets/sodaCan.png);
+    mask-size: auto 100%;
+}
+
+
+.sodaCon2{
+    background-color: rgb(156, 156, 244);
+    border-radius: 27% 73% 25% 75% / 70% 38% 62% 30%  ;
+    width: 150px;
+    aspect-ratio: 1/1;
+}
+
+.products{
+    scrollbar-width: none;
+}
+/*************drink********************/
+
+.drinkCan{
+    background-size: auto 100%;
+    width: 90px;
+    aspect-ratio: 2/3.5;
+    background-blend-mode: multiply;
+    mask-image: url(./assets/sodaCan.png);
+    mask-size: auto 100%;
+}
+
+/********************************************/
+details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open]>summary {
+  margin-bottom: 0.5rem;
+}
+
+.productGrid{
+    grid-template-rows: 100px 250px 100px;
+}
+
+
+.footer {
+    --mask:
+    radial-gradient(67.08px at 50% 90px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.detail1{
+    border: none !important;
+    outline: none !important;
+    border-color: transparent;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.bagItem{
+    box-shadow: 10px 10px 30px 1px gray;
+}
+/*********************************************/
+.cards-container {
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 20px;
+  position: relative;
+}
+
+.stack-card {
+  width: 80%;
+  max-width: 400px;
+  height: 250px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto 20px;
+  position: sticky;
+  top: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+@keyframes slideLeft {
+    from{transform: rotate(45deg);}
+    to{transform: rotate(-30deg) translateX(-200px);}
+}
+
+@keyframes slideRight {
+    from{transform: rotate(-45deg);}
+    to{transform: rotate(30deg) translateX(200px);}
+}
+
+
+@import "tailwindcss"
