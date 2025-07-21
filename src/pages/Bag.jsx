@@ -126,7 +126,7 @@ const Bag = () => {
                     <div className="*:flex *:justify-between">
                         <div className="text-[20px] font-[600]"><p>items</p> <p>{countItems()}</p></div>
                         <div className="text-[20px] font-[600]"><p>Fee</p><p>11$</p></div>
-                        <div className="text-[20px] font-[600]"><p>Total Price</p><p>example$</p></div>
+                        <div className="text-[20px] font-[600]"><p>Total Price</p><p>283$</p></div>
                     </div>
                     <button className="bg-black mt-5 rounded-full text-white text-[20px] font-[600] px-5 py-2 w-[100%]">Sumbit order</button>
                 </div>
