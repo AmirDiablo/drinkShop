@@ -29,19 +29,17 @@ function App() {
     <>
       <BrowserRouter>
         <Nav />
-        <div className="relative">
-          <div className="pages mt-20">
-            <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="products" element={<Products />} />
-              <Route path="productInfo" element={<ProductInfo />} />
-              <Route path="bag" element={<Bag />} />
-              <Route path="fav" element={<Fav />} />
-              <Route path="offers" element={<Offers />} />
-            </Routes>
-          </div>
+        <div className="pages mt-20">
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="products" element={<Products />} />
+            <Route path="productInfo" element={<ProductInfo />} />
+            <Route path="bag" element={<Bag />} />
+            <Route path="fav" element={<Fav />} />
+            <Route path="offers" element={<Offers />} />
+          </Routes>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">{isLarge ? <Footer2 /> : <Footer />}</div>
+        {isLarge ? <Footer2 /> : <Footer />}
       </BrowserRouter>
     </>
   )

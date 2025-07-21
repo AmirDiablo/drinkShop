@@ -11,11 +11,13 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Search from "./Search";
 import { useBag } from "../context/BagContext";
+import { useFav } from "../context/FavContext";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [searchIsOpen, setSearchIsOpen] = useState(false)
     const { bagCount, setNumber } = useBag()
+    const { favCount, setFavNumber } = useFav()
     const navigate = useNavigate()
 
     const openMenu = ()=> {
@@ -54,9 +56,23 @@ const Nav = () => {
         setNumber(totalNumber)
     }
 
+    const countFav = (fav)=> {
+        const favCount = (fav ?? []).length
+
+        let totalNumber = 0;
+        for(let i=0; i<favCount ; i++){
+            totalNumber = totalNumber + fav[i].number
+        }
+        
+        setFavNumber(totalNumber)
+    }
+
     useEffect(()=> {
         const bag = JSON.parse(localStorage.getItem("bag"))
         count(bag)
+
+        const fav = JSON.parse(localStorage.getItem("fav"))
+        countFav(fav)
     },[])
 
     return ( 
@@ -80,7 +96,7 @@ const Nav = () => {
                 <Link to="/offers" className="py-2 px-5">Offers</Link>
                 <Link className="py-2 px-5">About Us</Link>
                 <div className="w-[90%] mx-auto h-[1px] bg-black/20 my-5"></div>
-                <Link to="/fav" className="px-5 py-2"><FaRegHeart className="mr-2"/><p>Favorite</p></Link>
+                {favCount === 0 ? <Link onClick={ (event) => event.preventDefault()} to="/fav" className="px-5 py-2"><FaRegHeart className="mr-2"/><p>Favorite</p></Link> : <Link to="/fav" className="px-5 py-2"><FaRegHeart className="mr-2"/><p>Favorite</p></Link>}
                 <Link to="/bag" className="px-5 py-2"><IoBagOutline className="mr-2"/> <p>Bag</p></Link>
                 <Link className="px-5 py-2"><BsBoxSeam className="mr-2"/> <p>Orders</p></Link>
                 <Link className="px-5 py-2"><IoStorefrontOutline className="mr-2"/> <p>Find a store</p></Link>
