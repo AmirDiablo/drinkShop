@@ -142,7 +142,7 @@ const ProductInfo = () => {
                 </details>
 
                 <button className="bg-black text-white font-[700] text-[20px] px-5 py-2 rounded-2xl w-[90%] text-center block mx-auto sm:col-start-2 col-end-2 hover:cursor-pointer" onClick={()=> addToBag(product.id, product.name, product.image, product.caption, product.price)}>Add to bag</button>
-                <button className="border-1 border-black text-[20px] font-[700] px-5 py-2 rounded-2xl w-[90%] text-center block mx-auto mt-2 sm:col-start-2 hover:cursor-pointer" onClick={()=> addToFav(product.id, product.name, product.img, product.caption, product.price)}>Add to favorite</button>
+                <button className="border-1 border-black text-[20px] font-[700] px-5 py-2 rounded-2xl w-[90%] text-center block mx-auto mt-2 sm:col-start-2 hover:cursor-pointer" onClick={()=> addToFav(product.id, product.name, product.image, product.caption, product.price)}>Add to favorite</button>
             </div>
             
         </div>
