@@ -55,7 +55,7 @@ const Fav = () => {
     
 
     return ( 
-        <div className="px-10 pb-20">
+        <div className="px-10 pb-30">
             <p className="text-[20px] font-[700]">My Favs</p>
 
             <div>

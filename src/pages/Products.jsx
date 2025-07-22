@@ -42,7 +42,7 @@ const Products = () => {
 
 
     return ( 
-        <div className="px-10 py-5 sm:flex sm:flex-wrap sm:gap-3">
+        <div className="px-10 py-5 lg:pb-30 sm:flex sm:flex-wrap sm:gap-3">
             {products.map((item)=> (
                 <Drink key={item.id} pro={item} />
             ))}

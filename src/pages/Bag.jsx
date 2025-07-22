@@ -91,10 +91,10 @@ const Bag = () => {
 
 
     return ( 
-        <div className="px-10">
+        <div className="px-10 pb-20">
             <p className="text-[20px] font-[700]">My Bag</p>
 
-            <div className=" md:grid md:grid-cols-10 md:grid-rows-10 md:gap-10">
+            <div className="md:grid md:grid-cols-10 md:gap-10">
 
                 <div className="mt-10 mb-10 md:col-start-1 col-span-6">
                     {items.map((item)=> (
